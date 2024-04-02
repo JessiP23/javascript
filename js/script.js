@@ -43,6 +43,11 @@ if (number2 < 10 && number2 > 14){
 }
 
 
+
+/*String Concetenation */
+let name = 'Jessi';
+console.log('Hello' + name);
+
 /* Math Problem*/
 // The initial numbers that must be verified.
 const n1 = 10;
@@ -89,3 +94,36 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
+
+/*
+const n1 = 10;
+const n2 = 15;
+const n3 = 20;
+const n4 = 5;
+ */
+
+if (n1%5==0 && n2%5==0 && n3%5==0 && n4%5==0){
+    console.log('All numbers are divided by 5');
+} else{
+    console.log('The numbers are not divided by 5');
+}
+
+/*The first number is 10, the last number is 5 */
+
+if (n1 < n4){
+    console.log('The first number is less than the last.');
+} else{
+    console.log('The first number is greater than the last');
+}
+
+/*Arithmetic chain: 
+Subtract the first number from the second number.
+Multiply the result by the third number.
+Find the remainder of dividing the result by the fourth number.
+  */
+
+let operation = n1 - n2;
+operation *= n3;
+operation %= n4;
+console.log(operation);
