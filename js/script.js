@@ -13,6 +13,9 @@ const username = "christ11";
 console.log(message);
 console.log(user1);
 
+console.log("10" + 5);
+console.log(5**2)
+
 let userInput;
 userInput = 'Jessi';
 userInput = prompt('enter your name: ');
@@ -127,3 +130,71 @@ let operation = n1 - n2;
 operation *= n3;
 operation %= n4;
 console.log(operation);
+
+
+
+/*Part 2: Practical Math */
+
+const totalDistance = 1500;
+const priceOfGallon = 3;
+const budgetForTrip = 175;
+
+function totalTrip (milesPerHour, milesPerGallon){
+    //First lets determine the number of hours that will take to the destination
+    //According the route is empty of traffic and it always run at the same constant speed
+    let numberOfHours = totalDistance / milesPerHour;
+    //Calculate the number of gallons for the road trip at certain speed
+    let numberOfGallons = totalDistance / milesPerGallon;
+
+    //Calculate the price of the trip by multiplying the number of gallons by the price of gallons
+    let priceOfTrip = numberOfGallons * priceOfGallon;
+
+    //It the price of the road trip is less or equal than the budget it will allow the road trip.
+    if (priceOfTrip <= budgetForTrip){
+        console.log("The trip will take " + numberOfHours + ", it will consume " + numberOfGallons + " gallons and the price for this trip is " + priceOfTrip + " dollars. Consequently, this fits into the budget, YAY!");
+    } else {
+        console.log("Sorry, your road trip does not fit into the budget.")
+    }
+}
+
+//Different tests - Done manually and proven by using JavaScript
+totalTrip(55, 30);
+totalTrip(60, 30);
+totalTrip(75, 23);
+
+/*
+55 miles per hour
+
+I would need 27 - 28 hours
+30 miles per gallon - Which makes the estimate of 50 gallons
+
+The average cost of fuel is $3 per gallon
+
+50 x 3 = 150
+Fit into the budget
+
+
+60 miles per hour
+
+I would need 25 hours
+28 miles per gallon - Which makes the estimate of ~ 53.8
+
+53.8 x 3 = 161.4
+Fit into the budget
+
+
+75 miles per hour
+
+I would need 20 hours
+23 miles per gallon - Which makes the estimate of ~65.2
+
+65.2 x 3 = 195.6
+Does not fit into the budget
+ */
+
+// 1) The answer for this is the 50 gallons for the entire trip
+// 2) This will cover the fuel expense, the price is 150 dollars.
+// 3) The trip will take 25 hours
+
+
+
